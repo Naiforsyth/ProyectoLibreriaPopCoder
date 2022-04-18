@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/5cb7d34bd7.js" crossorigin="anonymous"></script>
+
+  <!-- Link Bootstrap -->
+  <link rel="stylesheet" href="./../assests/css/bootstrap.min.css">
+
+  <!-- Link style CSS -->
+  <link rel="stylesheet" href="./../assests/css/estilos.css">
+  <title>Librería POP - Registro</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="./../index.html"><img src="./../assests/img/popLogo.png" alt="" class="logo"></a>
+      <form class="d-flex">
+        <input class="form-control col-lg-3" type="search" placeholder="Search" aria-label="Search">
+        <label for="" class="fas fa-search icon"></label>
+      </form>
+      <div class="menu__ham"><i class="fas fa-bars menu__ham"></i></div>
+      <ul>
+        <li><a href="./../index.html">home</a></li>
+        <li><a href="./products.html">productos</a></li>
+        <li><a href="./about.html">nosotros</a></li>
+        <li><a href="./contact.html">contacto</a></li>
+        <li><a>Mi cuenta</a>
+          <ul>
+            <li><a href="./login.html">login</a></li>
+            <li><a href="./register.html">registro</a></li>
+          </ul>
+        <li><a href="./cart.html" class="fas fa-shopping-cart icon"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main -->
+  <main>
+    <section class="heading reg">
+      <h1>registro</h1>
+      <p><a href="./../index.html">home</a> >> registro </p>
+    </section>
+
+    <section class="register">
+
+      <div class="container account__form">
+        <h3>registro usuario</h3>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name">
+          <label for="floatingInput">nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="mail" class="form-control" id="floatingMail" placeholder="Mail">
+          <label for="floatingMail">Mail</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">contraseña</label>
+        </div>
+        <div class="form-floating ">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">confirma tu contraseña</label>
+        </div>
+        <button type="button" class="btn btn-dark">inciar sesión</button>        
+        <a href="./login.html" class="btn">¿ya tienes una cuenta?</a>
+        </div>
+      </div>      
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="links__container">
+      <div class="links">
+        <h3 class="links__title">POP Librería</h3>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./../index.html">home</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./products.html">productos</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./about.html">nosotros</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./contact.html">contacto</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./login.html">login</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./register.html">registro</a></li>
+        <li>
+        <li><i class="fa-solid fa-angle-right"></i><a href="./cart.html">mi compra</a></li>
+
+      </div>
+
+      <div class="links">
+        <h3 class="links__title">Síguenos</h3>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-facebook-f"></i></i>Facebook</a></li>
+          <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__form">
+        <h3 class="footer__form__title">Newsletter</h3>
+        <p class="footer__form__content">Suscríbete para recibir nuestras noticias</p>
+        <form action="">
+          <input type="email" placeholder="correo electronico">
+          <input class="btn--form" type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
+  </footer>
+
+<!-- Script Bootstrap -->
+<script src="./../assests/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
