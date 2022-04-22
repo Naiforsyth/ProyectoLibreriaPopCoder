@@ -34,7 +34,7 @@ header {
 
 
 header .logo {
-  max-width: 7rem;
+  width: 7rem;
   margin-top: 3px;
 }
 
@@ -60,7 +60,7 @@ nav {
   background: #fff;
 }
 
-nav form {
+/* nav form {
   display: flex;
   align-items: center;
 }
@@ -83,11 +83,11 @@ nav .browser {
 nav .browser:focus {
   font-size: 2rem;
   transition: all .5s;
-}
+} */
 
-nav label {
+/* nav label {
   font-size: 15px;
-}
+} */
 
 nav ul li {
   position: relative;
@@ -185,11 +185,18 @@ nav .menu__ham {
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:360px) {
+  nav .logo {
+    max-width: 5rem;
+    margin: 1rem;
+  }
+}
+
+/* @media screen and (max-width:480px) {
   nav .browser {
     width: 85%;
   }
-}
+} */
 
 .contactUs,
 .aboutUs,
@@ -200,11 +207,11 @@ nav .menu__ham {
 }
 
 
-.banner .banner__image {
+/* .banner .banner__image {
   width: 100%;
-}
+} */
 
-@media screen and (max-width:1023px) {
+/* @media screen and (max-width:1023px) {
   .banner .banner__title {
     top: 300px;
   }
@@ -226,8 +233,8 @@ nav .menu__ham {
     top: 300px;
     left: 70px;
     font-size: 1.5rem;
-  }
-}
+  } 
+}*/
 
 .heading {
   text-align: center;
@@ -301,44 +308,32 @@ nav .menu__ham {
   width: 20rem;
 }
 
-.card .card__image {
+/* .card .card__image {
   border-radius: .5rem;
   overflow: hidden;
   position: relative;
   max-height: 40rem;
   width: 100%;
-}
+} */
 
-.card .card__image img {
+/* .card .card__image img {
   width: 95%;
   padding: 1rem;
+} */
 
-}
-
-.card .card__content {
+/* .card .card__content {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+} */
 
-.card .card__content h3 {
+/* .card .card__content h3 {
   font-size: 1rem;
   color: #333;
-}
+} */
 
 .card .card__starts {
   padding: 1rem 0;
   color: #F25063;
-}
-
-.card .card__price {
-  font-size: 1.5rem;
-  color: #333;
-  padding-bottom: 1rem;
-}
-
-.card .card__price span {
-  font-size: 1rem;
-  text-decoration: line-through;
 }
 
 .card:hover {
@@ -355,6 +350,10 @@ nav .menu__ham {
   flex-wrap: wrap;
 }
 
+.about h1 {
+  text-align: center;
+}
+
 .about .container {
   display: flex;
   justify-content: space-evenly;
@@ -362,7 +361,7 @@ nav .menu__ham {
   width: 100%;
 }
 
-.about .about__image {
+/* .about .about__image {
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -370,7 +369,7 @@ nav .menu__ham {
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .about .about__image img {
   width: 100%;
@@ -437,6 +436,7 @@ nav .menu__ham {
 .icons__container .icon h3 {
   font-size: 1rem;
   font-weight: 400;
+  margin-top: 1.5rem;
 }
 
 .icons__container .icon:hover {
@@ -483,7 +483,6 @@ nav .menu__ham {
     font-weight: 400;
   }
 }
-
 
 .contact {
   display: flex;
@@ -538,7 +537,6 @@ textarea {
   width: 90%;
 }
 
-
 .account__form {
   margin: 5rem auto;
   max-width: 40rem;
@@ -555,32 +553,32 @@ textarea {
   margin-bottom: .7rem;
 }
 
-.account__form .input__form {
+/* .account__form .input__form {
   margin: 1rem;
   display: flex;
   border-radius: .3rem;
   padding: .5rem 1rem;
   align-items: center;
-  border: solid 1px #000;
-}
+  border: solid 2px #000; 
+}*/
 
-.account__form .input__form input {
+/* .account__form .input__form input {
   font-size: 1.5rem;
   border-radius: .5rem;
-}
+} */
 
-span {
+/* span {
   margin-right: 1rem;
-}
+} */
 
-.account__form .btn__form {
+/* .account__form .btn__form {
   padding: 1rem;
 }
 
 .account__form .register__btn input,
 a {
   margin: .5rem;
-}
+} */
 
 @media screen and (max-width:520px) {
   .account__form {
@@ -592,7 +590,7 @@ a {
   }
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:480px) {
   .account__form {
     width: 30rem;
   }
@@ -606,7 +604,7 @@ a {
 
 .cart .card__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -634,8 +632,8 @@ a {
   height: 10rem;
 }
 
-.cart .card__container .cart__card:hover {
-  transform: scaleY(1.1);
+.cart .card__container .cart__card img:hover {
+  transform: scale(1.1);
   transition: all .2S;
 }
 
@@ -648,7 +646,6 @@ a {
 .cart .card__container .cart__card span {
   color: #666;
   font-size: 1.5rem;
-
 }
 
 .cart .card__container .cart__card .cart__card__price span {
@@ -683,7 +680,6 @@ a {
   padding: 2rem;
   border-radius: .5rem;
   border: 0.1rem solid #333;
-
 }
 
 .cart__total h3 {
@@ -702,7 +698,7 @@ a {
   }
 
   .cart__total {
-    width: 90%; 
+    width: 90%;
   }
 }
 
@@ -831,5 +827,4 @@ footer .btn--form:hover {
   footer .footer__form {
     margin-top: 2rem;
   }
-
 }
