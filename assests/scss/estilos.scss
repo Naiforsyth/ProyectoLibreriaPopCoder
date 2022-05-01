@@ -1,37 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import "./variants";
+@import "./btns";
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-transform: capitalize;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
 }
-
-$pink: #F25063;
-$black: #333;
-$white: #fff;
-$light-color: #666;
-$light-bg: #eee;
-$border: .1rem solid $black;
 
 .btn {
-  display: inline-block;
-  padding: .5rem 2rem;
-  font-size: 1.6rem;
-  color: $black;
-  border: $border;
-  background: none;
-  cursor: pointer;
-  border-radius: .5rem;
-  text-decoration: none;
-  margin: 1rem;
-}
-
-.btn:hover {
-  background: $black;
-  color: $white;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 }
 
 html {
@@ -165,9 +145,10 @@ nav {
       display: block;
       margin-right: 1rem;
 
-      &:hover {
+      &:hover  {
         color: $pink;
       }
+
     }
 
     li {
@@ -235,6 +216,7 @@ nav {
 }
 
 .products {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,14 +254,23 @@ nav {
       color: $pink;
     }
 
+    .desc{
+      display: none;
+    }
+
     &:hover {
       transform: scaleX(1.1);
-      transition: all .2s;
+      transition: .2s
+    }
+
+    &:hover .desc{
+      display: block;   
     }
   }
 }
 
 .about {
+    
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -287,7 +278,7 @@ nav {
   margin-bottom: 5rem;
   flex-wrap: wrap;
 
-  h1 {
+  h1, h2 {
     text-align: center;
   }
 
@@ -324,17 +315,6 @@ nav {
       }
 
       .btn--about {
-        display: inline-block;
-        padding: .8rem 2rem;
-        font-size: 1.5rem;
-        color: $black;
-        border: $border;
-        background: none;
-        cursor: pointer;
-        border-radius: .5rem;
-        margin: 2rem;
-        text-decoration: none;
-
         &:hover {
           background: $black;
           color: $white;
@@ -474,6 +454,8 @@ nav {
 .login,
 .register {
   .account__form {
+    @include grid(32rem);
+
     margin: 5rem auto;
     max-width: 40rem;
     border-radius: .5rem;
@@ -517,10 +499,7 @@ nav {
 
 .cart {
   .card__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    @include grid(32rem);
 
     .cart__card {
       border-radius: .5rem;
@@ -620,6 +599,7 @@ nav {
       }
     }
   }
+
   .cart__total {
     width: 90%;
   }
@@ -700,18 +680,6 @@ footer {
   }
 
   .btn--form {
-    display: inline-block;
-    font-size: 1rem;
-    color: $black;
-    border: $border;
-    background: none;
-    cursor: pointer;
-    border-radius: .5rem;
-    width: 25%;
-    height: 30px;
-    text-align: center;
-    margin-top: 1rem;
-
     &:hover {
       background: $black;
       color: $white;
