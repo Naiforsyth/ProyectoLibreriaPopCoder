@@ -55,22 +55,22 @@ header {
     width: 7rem;
     margin-top: 3px; }
 
-nav {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-around;
   background: #fff; }
-  nav ul {
+  .navbar ul {
     list-style: none; }
-    nav ul li {
+    .navbar ul li {
       position: relative;
       float: left; }
-      nav ul li:hover ul {
+      .navbar ul li:hover ul {
         display: block;
         background: #fff; }
-      nav ul li a {
+      .navbar ul li a {
         display: block;
         color: #666;
         font-weight: 600;
@@ -79,25 +79,25 @@ nav {
         line-height: 120%;
         padding: 10px 15px;
         border-radius: 3px; }
-        nav ul li a:hover {
+        .navbar ul li a:hover {
           background: #fff;
           color: #F25063; }
-      nav ul li ul {
+      .navbar ul li ul {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         padding: 0; }
-        nav ul li ul li {
+        .navbar ul li ul li {
           width: 100%; }
-  nav form label {
+  .navbar form label {
     color: #666;
     font-size: 1.5rem;
     padding: 1rem; }
-    nav form label:hover {
+    .navbar form label:hover {
       color: #F25063;
       cursor: pointer; }
-  nav .menu__ham {
+  .navbar .menu__ham {
     font-size: 30px;
     color: #666;
     float: right;
@@ -106,37 +106,33 @@ nav {
     display: none; }
 
 @media screen and (max-width: 1023px) {
-  nav ul a {
+  .navbar ul a {
     padding: 0.5rem;
     font-size: 12px; } }
 
 @media screen and (max-width: 980px) {
-  nav ul {
-    background: #F25063;
-    position: fixed;
-    top: 80px;
+  .navbar .menu__ham {
+    display: block;
+    margin-right: 1rem; }
+    .navbar .menu__ham:hover {
+      color: #F25063; }
+  .navbar ul {
+    background: #fff;
+    position: absolute;
+    top: 99%;
     bottom: 0;
     width: 100%;
     left: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
-  nav .menu__ham {
-    display: block;
-    margin-right: 1rem; }
-    nav .menu__ham:hover {
-      color: #F25063; }
-  nav li {
+  .navbar li {
     display: block;
     margin: 50px 0;
     line-height: 30px; }
-    nav li a {
+    .navbar li a {
       font-size: 20px; } }
 
 @media screen and (max-width: 360px) {
-  nav .logo {
+  .navbar .logo {
     max-width: 5rem;
     margin: 1rem; } }
 
@@ -213,7 +209,8 @@ nav {
   margin-top: 5rem;
   margin-bottom: 5rem;
   flex-wrap: wrap; }
-  .about h1, .about h2 {
+  .about h1,
+  .about h2 {
     text-align: center; }
   .about .container {
     display: flex;
