@@ -27,9 +27,6 @@ body {
 
 header {
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: flex;
@@ -145,7 +142,7 @@ nav {
       display: block;
       margin-right: 1rem;
 
-      &:hover  {
+      &:hover {
         color: $pink;
       }
 
@@ -163,10 +160,10 @@ nav {
   }
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:420px) {
   nav .logo {
     max-width: 5rem;
-    margin: 1rem;
+    margin: .5rem;
   }
 }
 
@@ -216,7 +213,7 @@ nav {
 }
 
 .products {
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,7 +241,6 @@ nav {
   .card {
     border-radius: .5rem;
     text-align: center;
-    border: $border;
     padding: 1rem;
     margin: 1rem;
     width: 20rem;
@@ -254,23 +250,17 @@ nav {
       color: $pink;
     }
 
-    .desc{
-      display: none;
-    }
-
     &:hover {
-      transform: scaleX(1.1);
-      transition: .2s
-    }
-
-    &:hover .desc{
-      display: block;   
+      border: $border;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3%);
+      transition: all .5s;
     }
   }
 }
 
 .about {
-    
+
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -278,12 +268,14 @@ nav {
   margin-bottom: 5rem;
   flex-wrap: wrap;
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 
   .container {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     padding: 3rem;
     width: 100%;
@@ -304,6 +296,7 @@ nav {
       font-size: 1.2rem;
       width: 100%;
 
+
       h3 {
         margin: 1rem;
 
@@ -312,14 +305,9 @@ nav {
       p {
         margin: 1rem;
         text-align: justify;
+        text-transform: none;
       }
 
-      .btn--about {
-        &:hover {
-          background: $black;
-          color: $white;
-        }
-      }
 
     }
   }
@@ -349,15 +337,16 @@ nav {
       }
 
       &:hover {
-        transform: scaleX(1.1);
         background: $black;
         color: $white;
-        transition: all .2s;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        transform: translateY(-3%);
+        transition: all .5s;
       }
 
       &:hover img {
         filter: invert(1);
-        transition: all .2s;
+        transition: all .5s;
       }
     }
   }
@@ -446,7 +435,7 @@ nav {
 
     &:hover {
       transform: scale(1.1);
-      transition: all .3s;
+      transition: all .5s;
     }
   }
 }
@@ -487,15 +476,15 @@ nav {
 
 @media screen and (max-width:480px) {
   .account__form {
-    width: 30rem;
+    width: 33rem;
+
+    .form-floating .btn{
+      width: 25px;
+    }
   }
 }
 
-@media screen and (max-width:380px) {
-  .account__form {
-    width: 25rem;
-  }
-}
+
 
 .cart {
   .card__container {
@@ -523,8 +512,9 @@ nav {
         height: 10rem;
 
         &:hover {
-          transform: scale(1.1);
-          transition: all .2S;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+          transform: translateY(-3%);
+          transition: all .5s;
         }
       }
 
@@ -561,7 +551,14 @@ nav {
             text-decoration: line-through;
 
           }
+
         }
+      }
+
+      &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        transform: translateY(-3%);
+        transition: all .5s;
       }
     }
   }
@@ -579,6 +576,12 @@ nav {
       span {
         color: $pink;
       }
+    }
+
+    &:hover {
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(3%);
+      transition: all .3s;
     }
   }
 
@@ -640,7 +643,7 @@ footer {
 
           &:hover {
             color: $pink;
-            padding-left: 5%;
+            padding-left: 2px;
             transition: all .2s;
           }
         }
@@ -687,26 +690,12 @@ footer {
   }
 }
 
-@media screen and (max-width:480px) {
-  footer {
-    form {
-      input[type="email"] {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width:320px) {
-  footer {
-    form {
-      input[type="email"] {
-        font-size: 0.8rem;
-      }
-    }
-
+@media screen and (max-width:755px) {
+  .links__container {
+    margin:0;
     .footer__form {
-      margin-top: 2rem;
+        margin: 3rem;
+        padding: 2rem;
+      }
     }
   }
-}
