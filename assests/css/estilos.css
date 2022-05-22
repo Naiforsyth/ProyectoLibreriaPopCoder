@@ -51,7 +51,7 @@ header {
     width: 7rem;
     margin-top: 3px; }
 
-nav {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
