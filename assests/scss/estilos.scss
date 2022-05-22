@@ -1,6 +1,9 @@
 @import "./variants";
 @import "./btns";
 
+
+
+
 @mixin grid($val) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
@@ -31,10 +34,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  display: flex;
   align-items: center;
-  max-height: 7rem;
 
   .logo {
     width: 7rem;
@@ -50,134 +50,35 @@ nav {
   justify-content: space-around;
   background: $white;
 
-  ul {
-    list-style: none;
-
-    li {
-      position: relative;
-      float: left;
-
-      &:hover ul {
-        display: block;
-        background: $white;
-      }
-
-      a {
-        display: block;
-        color: $light-color;
-        font-weight: 600;
-        text-decoration: none;
-        text-align: center;
-        line-height: 120%;
-        padding: 10px 15px;
-        border-radius: 3px;
-
-        &:hover {
-          background: $white;
-          color: $pink;
-        }
-      }
-
-      ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 0;
-
-        li {
-          width: 100%;
-        }
-      }
-    }
+  .nav-link, .dropdown-item{
+    color: $black;
+  }
+  
+  .nav-link:hover{
+    color: $pink;
   }
 
-  form label {
-    color: $light-color;
-    font-size: 1.5rem;
-    padding: 1rem;
+  .dropdown-item:hover{
+    color: $pink;
+  } 
 
-    &:hover {
-      color: $pink;
-      cursor: pointer;
-    }
-  }
-
-  .menu__ham {
-    font-size: 30px;
-    color: $light-color;
-    float: right;
-    line-height: 80px;
-    cursor: pointer;
-    display: none;
+  .menu__ham{
+    font-size: 2.5rem;
+    padding: 5px;    
   }
 }
 
-
-@media screen and (max-width:1023px) {
-  nav {
-    ul {
-      a {
-        padding: 0.5rem;
-        font-size: 12px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width:980px) {
-  nav {
-    .menu__ham {
-      display: block;
-      margin-right: 1rem;
-
-      &:hover  {
-        color: $pink;
-      }
-    }
-
-    ul {
-      background: $white;
-      position: absolute;
-      top: 99%;
-      bottom: 0;
-      width: 100%;
-      left: 0;
-      clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);      
-    }
-    
-
-    li {
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-
-      a {
-        font-size: 20px;
-      }
-    }
-  }
-}
-
-
-
-
-@media screen and (max-width:420px) {
-  nav .logo {
-    width: 5rem;
-    margin: 1rem;
-  }
-}
 .heading {
   text-align: center;
   background: $pink;
+  margin-top: 20px;
 
   .contactUs,
   .aboutUs,
   .log,
   .reg,
   .cart {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   h1 {
@@ -202,8 +103,7 @@ nav {
 }
 
 @media screen and (max-width:1023px) {
-  .heading {
-    margin-top: 5px;
+  .heading {   
 
     p {
       h1 {
@@ -489,7 +389,7 @@ nav {
 
 .cart {
   .card__container {
-    @include grid(32rem);
+    @include grid(29.5rem);
 
     .cart__card {
       border-radius: .5rem;

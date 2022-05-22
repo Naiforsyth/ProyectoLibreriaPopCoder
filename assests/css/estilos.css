@@ -46,10 +46,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  max-height: 7rem; }
+  align-items: center; }
   header .logo {
     width: 7rem;
     margin-top: 3px; }
@@ -61,89 +58,26 @@ nav {
   width: 100%;
   justify-content: space-around;
   background: #fff; }
-  nav ul {
-    list-style: none; }
-    nav ul li {
-      position: relative;
-      float: left; }
-      nav ul li:hover ul {
-        display: block;
-        background: #fff; }
-      nav ul li a {
-        display: block;
-        color: #666;
-        font-weight: 600;
-        text-decoration: none;
-        text-align: center;
-        line-height: 120%;
-        padding: 10px 15px;
-        border-radius: 3px; }
-        nav ul li a:hover {
-          background: #fff;
-          color: #F25063; }
-      nav ul li ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 0; }
-        nav ul li ul li {
-          width: 100%; }
-  nav form label {
-    color: #666;
-    font-size: 1.5rem;
-    padding: 1rem; }
-    nav form label:hover {
-      color: #F25063;
-      cursor: pointer; }
+  nav .nav-link, nav .dropdown-item {
+    color: #333; }
+  nav .nav-link:hover {
+    color: #F25063; }
+  nav .dropdown-item:hover {
+    color: #F25063; }
   nav .menu__ham {
-    font-size: 30px;
-    color: #666;
-    float: right;
-    line-height: 80px;
-    cursor: pointer;
-    display: none; }
-
-@media screen and (max-width: 1023px) {
-  nav ul a {
-    padding: 0.5rem;
-    font-size: 12px; } }
-
-@media screen and (max-width: 980px) {
-  nav .menu__ham {
-    display: block;
-    margin-right: 1rem; }
-    nav .menu__ham:hover {
-      color: #F25063; }
-  nav ul {
-    background: #fff;
-    position: absolute;
-    top: 99%;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
-  nav li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px; }
-    nav li a {
-      font-size: 20px; } }
-
-@media screen and (max-width: 420px) {
-  nav .logo {
-    width: 5rem;
-    margin: 1rem; } }
+    font-size: 2.5rem;
+    padding: 5px; }
 
 .heading {
   text-align: center;
-  background: #F25063; }
+  background: #F25063;
+  margin-top: 20px; }
   .heading .contactUs,
   .heading .aboutUs,
   .heading .log,
   .heading .reg,
   .heading .cart {
-    margin-top: 10px; }
+    margin-top: 20px; }
   .heading h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -158,10 +92,8 @@ nav {
         color: #333; }
 
 @media screen and (max-width: 1023px) {
-  .heading {
-    margin-top: 5px; }
-    .heading p h1 {
-      font-size: 2rem; } }
+  .heading p h1 {
+    font-size: 2rem; } }
 
 .products {
   display: flex;
@@ -351,7 +283,7 @@ nav {
 
 .cart .card__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(29.5rem, 1fr));
   gap: 1.5rem; }
   .cart .card__container .cart__card {
     border-radius: .5rem;
